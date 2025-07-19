@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gahmed <gahmed@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 22:24:48 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/18 22:24:48 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/19 13:20:52 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ Animal::~Animal()
  // virtual function
 void Animal::makeSount() const
 {
-    
-        std::cout << "Animal making sound\n";
+    std::cout << "Animal making sound\n";
 }
 
 std::string Animal::getType() const
