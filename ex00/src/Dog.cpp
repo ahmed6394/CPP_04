@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:47:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 15:23:33 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/19 15:40:25 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Dog& Dog::operator=(const Dog& obj)
 	if(this != &obj)
 		this->type = obj.type;
 	std::cout << "Dog assignment operator called\n";
+	return *this;
 }
 
 //destructor
