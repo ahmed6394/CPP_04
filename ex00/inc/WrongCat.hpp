@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 13:34:19 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 16:18:09 by gahmed           ###   ########.fr       */
+/*   Created: 2025/07/19 16:20:09 by gahmed            #+#    #+#             */
+/*   Updated: 2025/07/19 16:20:19 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Dog(); // default constructor
-		Dog(std::string aType); // perameterise constructor
-		Dog(const Dog& obj); // copy constructor
-		Dog& operator=(const Dog& obj); // copy assingment operator
-		~Dog();
+		WrongCat(); // default constructor
+		WrongCat(std::string aType); //perameterise constructor
+		WrongCat(const WrongCat& obj); // copy constructor
+		WrongCat& operator=(const WrongCat& obj); // copy assignment operator
+		~WrongCat(); // destructor
 
-		void makeSound() const;
+		void makeSound() const; // override function
 };
