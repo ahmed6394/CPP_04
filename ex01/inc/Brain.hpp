@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/19 17:43:31 by gahmed            #+#    #+#             */
+/*   Updated: 2025/07/19 18:01:36 by gahmed           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+
+#include "Animal.hpp"
+
+class Brain
+{
+	private:
+		std::string ideas[100];
+	
+	public:
+		Brain(); // default constructor
+		Brain(std::string idea); // perameterised constructor
+		Brain(const Brain& obj); // copy constructor
+		
+		~Brain(); // destructor
+};
