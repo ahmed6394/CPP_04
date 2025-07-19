@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:31 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 18:01:36 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/19 18:04:27 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ class Brain
 		Brain(const Brain& obj); // copy constructor
 		
 		~Brain(); // destructor
+		std::string getIdea();
 };
