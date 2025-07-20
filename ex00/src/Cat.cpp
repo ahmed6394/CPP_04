@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:03:09 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 13:21:23 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Cat::Cat() : Animal()
 	 std::cout << "Cat Default constructor called\n";
 }
 
-//perameterise constructor
+//parameterized constructor
 Cat::Cat(std::string aType): Animal()
 {
 	type = aType;
-	std::cout << "Cat perameterise constructor called\n";
+	std::cout << "Cat parameterized constructor called\n";
 }
 
 // copy constructor

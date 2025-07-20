@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:31 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 18:04:27 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include "Animal.hpp"
 
-class Brain
+class Brain : public Animal
 {
 	private:
 		std::string ideas[100];
 	
 	public:
 		Brain(); // default constructor
-		Brain(std::string idea); // perameterised constructor
+		Brain(std::string idea); // parameterizedd constructor
 		Brain(const Brain& obj); // copy constructor
 		Brain& operator=(const Brain& obj); // copy assignment operator
 		~Brain(); // destructor

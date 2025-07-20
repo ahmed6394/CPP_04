@@ -18,7 +18,7 @@ class WrongCat : public WrongAnimal
 {
 	public:
 		WrongCat(); // default constructor
-		WrongCat(std::string aType); //perameterise constructor
+		WrongCat(std::string aType); //parameterized constructor
 		WrongCat(const WrongCat& obj); // copy constructor
 		WrongCat& operator=(const WrongCat& obj); // copy assignment operator
 		~WrongCat(); // destructor

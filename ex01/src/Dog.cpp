@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:47:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 15:40:25 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Dog::Dog() : Animal()
 	std::cout << "Dog default constructor called\n";
 }
 
-// perameterise constructor
+// parameterized constructor
 Dog::Dog(std::string aType) : Animal()
 {
 	type = aType;
-	std::cout << "Dog perameterise constructor called\n";
+	std::cout << "Dog parameterized constructor called\n";
 }
 
 // copy constructor

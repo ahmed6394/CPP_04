@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:26:46 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/19 16:38:56 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongAnimal::WrongAnimal() : type("WrongAnimal")
 
 WrongAnimal::WrongAnimal(std::string aType) : type(aType)
 {
-    std::cout << "WrongAnimal perameterise constructor called\n";
+    std::cout << "WrongAnimal parameterized constructor called\n";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& obj) : type(obj.type)

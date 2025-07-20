@@ -20,7 +20,7 @@ class WrongAnimal
         std::string type;
     public:
         WrongAnimal(); // default constructor
-        WrongAnimal(std::string aType); // perameterise constructor
+        WrongAnimal(std::string aType); // parameterized constructor
         WrongAnimal(const WrongAnimal& obj); // copy constructor
         WrongAnimal& operator=(const WrongAnimal& obj); // copy assignment operator
         ~WrongAnimal(); // virtual destructor
