@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:03:09 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:48:47 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 18:34:13 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::Cat(std::string aType): Animal()
 Cat::Cat(const Cat& obj) : Animal(obj)
 {
     catBrain = new Brain(*obj.catBrain); // Deep copy of Brain
-	type = obj.type;
+	// type = obj.type;
     std::cout << "Cat copy constructor called\n";
 }
 
@@ -43,7 +43,7 @@ Cat& Cat::operator=(const Cat& obj)
 		delete catBrain; //Free the existing catBrain
 		Animal::operator=(obj); // copy base class member
 		catBrain = new Brain(*obj.catBrain); // Deep copy of brain
-		type = obj.type;
+		// type = obj.type;
 	}
 	std::cout << "Cat assignment operator called\n";
 	return *this;

@@ -6,27 +6,27 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:14 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:36:03 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 18:38:40 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Brain.hpp"
 
 // default constructor
-Brain::Brain() : Animal()
+Brain::Brain()
 {
 	std::cout << "Brain default constructor called\n";
 }
 
 // parameterizedd constructor
-Brain::Brain(std::string idea) : Animal()
+Brain::Brain(std::string idea)
 {
 	ideas[0] = idea;
 	std::cout << "Brain parameterized constructor called\n";
 }
 
 // copy constructor
-Brain::Brain(const Brain& obj) : Animal()
+Brain::Brain(const Brain& obj)
 {
 	for(int i = 0; i < 100; i++)
 		ideas[i] = obj.ideas[i];
