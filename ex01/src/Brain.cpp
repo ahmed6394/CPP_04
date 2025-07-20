@@ -10,3 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
+
+// default constructor
+Brain::Brain()
+{
+
+}
+
+// perameterised constructor
+Brain::Brain(std::string idea)
+{
+
+}
+
+// copy constructor
+Brain::Brain(const Brain& obj)
+{
+
+}
+
+// copy assignment operator
+Brain& Brain::operator=(const Brain& obj)
+{
+    
+}
+
+// destructor
+Brain::~Brain()
+{
+
+}
+
+
+std::string getIdea()
+{
+
+}

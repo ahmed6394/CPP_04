@@ -23,7 +23,7 @@ class Brain
 		Brain(); // default constructor
 		Brain(std::string idea); // perameterised constructor
 		Brain(const Brain& obj); // copy constructor
-		
+		Brain& operator=(const Brain& obj); // copy assignment operator
 		~Brain(); // destructor
 		std::string getIdea();
 };
