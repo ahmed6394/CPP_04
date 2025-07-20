@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:03:09 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:35:36 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 15:48:47 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 // default constructor
 Cat::Cat() : Animal()
 {
+	catBrain = new Brain(); //allocate memory for cat
 	type = "Cat";
 	 std::cout << "Cat Default constructor called\n";
 }
@@ -27,14 +28,10 @@ Cat::Cat(std::string aType): Animal()
 }
 
 // copy constructor
-// Cat::Cat(const Cat& obj): Animal(obj)
-// {
-// 	*this = obj;
-// 	std::cout << "Cat copy constructor called\n";
-// }
-Cat::Cat(const Cat& other) : Animal(other)
+Cat::Cat(const Cat& obj) : Animal(obj)
 {
-    this->catBrain = new Brain(*other.catBrain); // Deep copy of Brain
+    catBrain = new Brain(*obj.catBrain); // Deep copy of Brain
+	type = obj.type;
     std::cout << "Cat copy constructor called\n";
 }
 
@@ -43,10 +40,12 @@ Cat& Cat::operator=(const Cat& obj)
 {
 	if(this != &obj)
 	{
+		delete catBrain; //Free the existing catBrain
 		Animal::operator=(obj); // copy base class member
-		delete this->catBrain; //Free the existing catBrain
-		this->catBrain = new Brain(*obj.catBrain); // Deep copy of brain
+		catBrain = new Brain(*obj.catBrain); // Deep copy of brain
+		type = obj.type;
 	}
+	std::cout << "Cat assignment operator called\n";
 	return *this;
 }
 

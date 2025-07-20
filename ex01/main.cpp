@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:39:09 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:34:49 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 15:40:59 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "inc/Cat.hpp"
 #include "inc/Brain.hpp"
 
+// mian function to test deep copy of dog class
 int main()
 {
     // Create a Dog and set an idea
@@ -37,3 +38,14 @@ int main()
 
     return 0;
 }
+
+// main from subject
+/* int main()
+{
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	delete j;//should not create a leak
+	delete i;
+	
+	return 0;
+} */

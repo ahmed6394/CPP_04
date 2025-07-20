@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:47:07 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:17:14 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 15:47:40 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 // default constructor
 Dog::Dog() : Animal()
 {
+	dogBrain = new Brain(); // allocate memory for brain
 	type = "Dog";
 	std::cout << "Dog default constructor called\n";
 }
@@ -27,14 +28,10 @@ Dog::Dog(std::string aType) : Animal()
 }
 
 // copy constructor
-// Dog::Dog(const Dog& obj) : Animal(obj)
-// {
-// 	*this = obj;
-// 	std::cout << "Dog copy constructor called\n";
-// }
-Dog::Dog(const Dog& other) : Animal(other)
+Dog::Dog(const Dog& obj) : Animal(obj)
 {
-    this->dogBrain = new Brain(*other.dogBrain); // Deep copy of Brain
+    dogBrain = new Brain(*obj.dogBrain); // Deep copy of Brain
+	type = obj.type;
     std::cout << "Dog copy constructor called\n";
 }
 
@@ -44,9 +41,10 @@ Dog& Dog::operator=(const Dog& obj)
 {
 	if(this != &obj)
 	{
+		delete dogBrain; // free tthe existing brain
 		Animal::operator=(obj); // copy the base class member
-		delete this->dogBrain; // free tthe existing brain
-		this->dogBrain = new Brain(*obj.dogBrain); // Deep copy of brain
+		dogBrain = new Brain(*obj.dogBrain); // Deep copy of brain
+		type = obj.type;
 	}
 	std::cout << "Dog copy assignment operator called\n";
 	return *this;
