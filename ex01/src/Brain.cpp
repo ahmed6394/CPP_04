@@ -6,11 +6,11 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:14 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 13:03:42 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 15:36:03 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "../inc/Brain.hpp"
 
 // default constructor
 Brain::Brain() : Animal()
@@ -53,15 +53,27 @@ Brain::~Brain()
 	std::cout << "Brain destructor called\n";
 }
 
-std::string Brain::getIdea()
+void Brain::setIdea(int index, const std::string& idea)
 {
-	std::string allIdeas;
-	for(int i = 0; i < 100; i++)
+	if (index >= 0 && index < 100)
 	{
-		if(!ideas[i].empty())
-		{
-			allIdeas += ideas[i] + "\n";
-		}
+		ideas[index] = idea;
 	}
-	return allIdeas;
+	else
+	{
+		std::cerr << "Index out of bounds\n";
+	}
+}
+
+std::string Brain::getIdea(int index) const
+{
+	if (index >= 0 && index < 100)
+	{
+		return ideas[index];
+	}
+	else
+	{
+		std::cerr << "Index out of bounds\n";
+		return "";
+	}
 }

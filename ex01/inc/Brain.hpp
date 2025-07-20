@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:31 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 15:21:24 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ class Brain : public Animal
 		Brain(const Brain& obj); // copy constructor
 		Brain& operator=(const Brain& obj); // copy assignment operator
 		~Brain(); // destructor
-		std::string getIdea();
+		
+		void setIdea(int index, const std::string& idea);
+		std::string getIdea(int index) const;
 };

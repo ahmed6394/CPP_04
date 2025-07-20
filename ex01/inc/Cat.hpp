@@ -6,16 +6,19 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:44:01 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 12:45:43 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 14:08:48 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
+	private:
+		Brain* catBrain;
 	public:
 		Cat(); // default constructor
 		Cat(std::string aType); //parameterized constructor
@@ -24,4 +27,5 @@ class Cat : public Animal
 		~Cat(); // destructor
 
 		void makeSound() const; // override function
+		Brain *getBrain();
 };
