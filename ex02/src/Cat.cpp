@@ -6,14 +6,14 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:03:09 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:48:47 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 17:25:03 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
 
 // default constructor
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	catBrain = new Brain(); //allocate memory for cat
 	type = "Cat";
@@ -21,14 +21,14 @@ Cat::Cat() : Animal()
 }
 
 //parameterized constructor
-Cat::Cat(std::string aType): Animal()
+Cat::Cat(std::string aType): AAnimal()
 {
 	type = aType;
 	std::cout << "Cat parameterized constructor called\n";
 }
 
 // copy constructor
-Cat::Cat(const Cat& obj) : Animal(obj)
+Cat::Cat(const Cat& obj) : AAnimal(obj)
 {
     catBrain = new Brain(*obj.catBrain); // Deep copy of Brain
 	type = obj.type;
@@ -41,7 +41,7 @@ Cat& Cat::operator=(const Cat& obj)
 	if(this != &obj)
 	{
 		delete catBrain; //Free the existing catBrain
-		Animal::operator=(obj); // copy base class member
+		AAnimal::operator=(obj); // copy base class member
 		catBrain = new Brain(*obj.catBrain); // Deep copy of brain
 		type = obj.type;
 	}

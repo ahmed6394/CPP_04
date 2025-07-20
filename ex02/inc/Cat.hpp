@@ -6,16 +6,16 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:44:01 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 14:08:48 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 17:23:42 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	private:
 		Brain* catBrain;
@@ -26,6 +26,6 @@ class Cat : public Animal
 		Cat& operator=(const Cat& obj); // copy assignment operator
 		~Cat(); // destructor
 
-		void makeSound() const; // override function
+		void makeSound() const override; // override function
 		Brain *getBrain();
 };

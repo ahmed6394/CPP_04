@@ -6,15 +6,15 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:43:31 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 15:21:24 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 16:35:54 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Brain : public Animal
+class Brain
 {
 	private:
 		std::string ideas[100];

@@ -6,7 +6,7 @@
 /*   By: gahmed <gahmed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 16:05:11 by gahmed            #+#    #+#             */
-/*   Updated: 2025/07/20 16:05:56 by gahmed           ###   ########.fr       */
+/*   Updated: 2025/07/20 16:40:30 by gahmed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class AAnimal
         AAnimal& operator=(const AAnimal& obj); // copy assignment operator
         virtual ~AAnimal(); // virtual destructor
 
-        virtual void makeSound() const; // virtual function
+        virtual void makeSound() const = 0; // pure virtual function
         std::string getType() const;
 };
